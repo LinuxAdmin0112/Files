@@ -1,0 +1,43 @@
+[root@Ramesh ~]# ll
+total 12
+drwxr-xr-x. 3 root root   18 Apr 22 06:20 git
+-rw-r--r--. 1 root root 3474 Apr 22 06:44 google
+-rw-r--r--. 1 root root   20 Apr 22 06:50 hexa
+drwx------. 3 root root   16 Apr 22 03:33 snap
+-rw-r--r--. 1 root root   41 Apr 22 06:11 token
+[root@Ramesh ~]# less < hexa
+[root@Ramesh ~]# more < hexa
+ls -lh
+
+sh dest.sh
+
+[root@Ramesh ~]# less < hexa
+[root@Ramesh ~]# pwd > file
+[root@Ramesh ~]# cat file
+/root
+[root@Ramesh ~]# vi hexa 2> error
+[root@Ramesh ~]# sh hexa 2> error
+total 16K
+-rw-r--r--. 1 root root    0 Apr 22 06:53 error
+-rw-r--r--. 1 root root    6 Apr 22 06:52 file
+drwxr-xr-x. 3 root root   18 Apr 22 06:20 git
+-rw-r--r--. 1 root root 3.4K Apr 22 06:44 google
+-rw-r--r--. 1 root root   20 Apr 22 06:53 hexa
+drwx------. 3 root root   16 Apr 22 03:33 snap
+-rw-r--r--. 1 root root   41 Apr 22 06:11 token
+[root@Ramesh ~]# cat error
+sh: dest.sh: No such file or directory
+[root@Ramesh ~]# sh hexa &> output
+[root@Ramesh ~]# cat output
+total 20K
+-rw-r--r--. 1 root root   39 Apr 22 06:53 error
+-rw-r--r--. 1 root root    6 Apr 22 06:52 file
+drwxr-xr-x. 3 root root   18 Apr 22 06:20 git
+-rw-r--r--. 1 root root 3.4K Apr 22 06:44 google
+-rw-r--r--. 1 root root   20 Apr 22 06:53 hexa
+-rw-r--r--. 1 root root    0 Apr 22 06:54 output
+drwx------. 3 root root   16 Apr 22 03:33 snap
+-rw-r--r--. 1 root root   41 Apr 22 06:11 token
+sh: dest.sh: No such file or directory
+[root@Ramesh ~]#
+

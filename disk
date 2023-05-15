@@ -1,0 +1,159 @@
+Script started on 2023-04-08 00:02:59-04:00
+bash-4.4# fdisk -l /dev/sdb
+[1mDisk /dev/sdb: 2 GiB, 2147483648 bytes, 4194304 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+bash-4.4# 
+bash-4.4# 
+bash-4.4# fdisk /dev/sdb
+[32m
+Welcome to fdisk (util-linux 2.32.1).
+[0mChanges will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0xbb274f8a.
+
+Command (m for help): n p
+[1mDisk /dev/sdb: 2 GiB, 2147483648 bytes, 4194304 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xbb274f8a
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1): 1
+First sector (2048-4194303, default 2048): 
+Last sector, +sectors or +size{K,M,G,T,P} (2048-4194303, default 4194303): +500M
+
+Created a new partition 1 of type 'Linux' and of size 500 MiB.
+
+Command (m for help): p
+[1mDisk /dev/sdb: 2 GiB, 2147483648 bytes, 4194304 sectors
+[0mUnits: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xbb274f8a
+
+[1mDevice[0m     [1mBoot[0m [1mStart[0m [1m    End[0m [1mSectors[0m [1m Size[0m [1mId[0m [1mType[0m
+/dev/sdb1        2048 1026047 1024000  500M 83 Linux
+
+Command (m for help): w
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.
+
+bash-4.4# mkdir /sdb1
+mkdir: cannot create directory ‘/sdb1’: File exists
+bash-4.4# 
+bash-4.4# 
+bash-4.4# cat[K[K[Kvi [K[K[Kmkfs.exy[K[K[Kxfs /dev/sdv[Kb1
+meta-data=/dev/sdb1              isize=512    agcount=4, agsize=32000 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1    bigtime=0 inobtcount=0
+data     =                       bsize=4096   blocks=128000, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=1368, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+bash-4.4# vi /etc/fstab
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;49r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[49;1H"/etc/fstab" 17L, 689C[2;1H#
+# /etc/fstab
+# Created by anaconda on Wed Feb  1 15:57:05 2023
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/cs-root     /[23Cxfs     defaults[8C0 0
+UUID=97b8f752-38a5-4c31-be99-cf985db7bba6 /boot[19Cxfs     defaults[8C0 0
+/dev/mapper/cs-swap     none[20Cswap    defaults[8C0 0
+/dev/sdb1[15Csdb1[20Cext4    defaults[8C0 0
+/dev/vg1/ame[12Clvm1[20Cxfs     defaults[8C0 0
+/dev/sdb2[15Cviks[20Cext3    defaults[8C0 0
+[1m[34m~                                                                                                                                                                                            [19;1H~                                                                                                                                                                                            [20;1H~                                                                                                                                                                                            [21;1H~                                                                                                                                                                                            [22;1H~                                                                                                                                                                                            [23;1H~                                                                                                                                                                                            [24;1H~                                                                                                                                                                                            [25;1H~                                                                                                                                                                                            [26;1H~                                                                                                                                                                                            [27;1H~                                                                                                                                                                                            [28;1H~                                                                                                                                                                                            [29;1H~                                                                                                                                                                                            [30;1H~                                                                                                                                                                                            [31;1H~                                                                                                                                                                                            [32;1H~                                                                                                                                                                                            [33;1H~                                                                                                                                                                                            [34;1H~                                                                                                                                                                                            [35;1H~                                                                                                                                                                                            [36;1H~                                                                                                                                                                                            [37;1H~                                                                                                                                                                                            [38;1H~                                                                                                                                                                                            [39;1H~                                                                                                                                                                                            [40;1H~                                                                                                                                                                                            [41;1H~                                                                                                                                                                                            [42;1H~                                                                                                                                                                                            [43;1H~                                                                                                                                                                                            [44;1H~                                                                                                                                                                                            [45;1H~                                                                                                                                                                                            [46;1H~                                                                                                                                                                                            [47;1H~                                                                                                                                                                                            [48;1H~                                                                                                                                                                                            [1;1H[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[?25l[16;48r[m[48;1H
+[1;49r[48;1H[1m[34m~                                                                                                                                                                                            [m[49;1H[K[16;1H[?25h[?25l[1m[34m~                                                                                                                                                                                            [15;1H[?25h[m/dev/sdb[7C[8C sdb[15;16H[8C [?25l[49;1H[1m-- INSERT --[15;25H[?25h[?25l[m/sdb1[?25hsdb1   [8C[8Cext4[?25l [?25h[?25l [?25h[?25l [?25h[?25l [?25h[?25lx[?25h[?25lf[?25h[?25ls[?25h     defaults[8C[49;1H[K[15;72H[?25l[?25h[?25l[49;1H:[?2004h[?25hwq[?25l[?2004l"/etc/fstab" 15L, 615C written
+[?2004l[?1l>[?25h[?1049l[23;0;0tbash-4.4# cat /etx[Kc/fsr[Ktab 
+
+#
+# /etc/fstab
+# Created by anaconda on Wed Feb  1 15:57:05 2023
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/cs-root     /                       xfs     defaults        0 0
+UUID=97b8f752-38a5-4c31-be99-cf985db7bba6 /boot                   xfs     defaults        0 0
+/dev/mapper/cs-swap     none                    swap    defaults        0 0
+/dev/sdb1		/sdb1			xfs	defaults	0 0
+bash-4.4# 
+bash-4.4# 
+bash-4.4# mount /dev/sdb1 /sdb1
+bash-4.4# df -h /[K| grep /sdv[Kb1
+/dev/sdb1            495M   29M  466M   6% /sdb1
+bash-4.4# umount /d[Ks[Ksdb1
+bash-4.4# umount /sdb1[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[Kdf -h
+Filesystem           Size  Used Avail Use% Mounted on
+devtmpfs             1.8G     0  1.8G   0% /dev
+tmpfs                1.8G     0  1.8G   0% /dev/shm
+tmpfs                1.8G  8.5M  1.8G   1% /run
+tmpfs                1.8G     0  1.8G   0% /sys/fs/cgroup
+/dev/mapper/cs-root  9.0G  4.1G  5.0G  45% /
+/dev/sda1           1014M  215M  800M  22% /boot
+tmpfs                367M     0  367M   0% /run/user/0
+bash-4.4# df -humount /sdb1[1P
+bash-4.4# mount /sdb1[6Pdf -h | gtre[K[K[Krep /sdb1
+/dev/sdb1            495M   29M  466M   6% /sdb1
+bash-4.4# 
+bash-4.4# 
+bash-4.4# 
+bash-4.4# 
+bash-4.4# df -h | grep /sdb1[C[C[C[C[C[C[C[C[C[C[Kblkid
+/dev/sda1: UUID="97b8f752-38a5-4c31-be99-cf985db7bba6" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="1cf9d577-01"
+/dev/sda2: UUID="gjf5Gk-jcJx-JP1F-dzFE-q0Ox-1Ed9-mQC8bR" TYPE="LVM2_member" PARTUUID="1cf9d577-02"
+/dev/sdb1: UUID="d7ae9c26-0923-4c5d-9fed-efcf35e56cb5" BLOCK_SIZE="512" TYPE="xfs" PARTUUID="bb274f8a-01"
+/dev/mapper/cs-root: UUID="8c1883b4-1030-496e-b618-8c92e2e02801" BLOCK_SIZE="512" TYPE="xfs"
+/dev/mapper/cs-swap: UUID="74c1c437-b64f-4f05-a544-8756cf203079" TYPE="swap"
+bash-4.4# lsblk
+NAME        MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda           8:0    0 11.1G  0 disk 
+├─sda1        8:1    0    1G  0 part /boot
+└─sda2        8:2    0 10.1G  0 part 
+  ├─cs-root 253:0    0    9G  0 lvm  /
+  └─cs-swap 253:1    0  1.1G  0 lvm  [SWAP]
+sdb           8:16   0    2G  0 disk 
+└─sdb1        8:17   0  500M  0 part /sdb1
+sr0          11:0    1 1024M  0 rom  
+bash-4.4# /[Kexit
+exit
+
+Script done on 2023-04-08 00:08:10-04:00

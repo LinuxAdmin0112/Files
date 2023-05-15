@@ -1,0 +1,17 @@
+#Kernel restore, if kernel is acdentally deleted or correpted we should follow the below steps.
+
+# 1. If kernel got currepted, boot with previous version while booting...
+
+yum reinstall kernel-<Kernelversion>
+Reboot
+Boot with New version
+
+
+# 2. If .img file is deleted...
+  2.1 Reboot the server
+  2.2 Boot with Rescue mode OS
+  2.3 Login with root
+  2.4 cd /boot
+  2.5 Check the .img file which is missing
+  2.6 mkinitrd initramfs-<kernelversion>.img kernelversion
+  2.7 Reboot & Boot with recovered kernel version

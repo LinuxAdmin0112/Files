@@ -1,0 +1,355 @@
+bash-4.4# yum install snapd -y
+Last metadata expiration check: 3:55:34 ago on Saturday 08 April 2023 12:29:44 AM EDT.
+Dependencies resolved.
+====================================================================================================
+ Package                               Architecture    Version                Repository       Size
+====================================================================================================
+Installing:
+ snapd                                 x86_64          2.58.3-1.el8           epel             17 M
+Installing dependencies:
+ bash-completion                       noarch          1:2.7-5.el8            baseos          274 k
+ checkpolicy                           x86_64          2.9-1.el8              baseos          348 k
+ policycoreutils-python-utils          noarch          2.9-21.1.el8           baseos          253 k
+ python3-audit                         x86_64          3.0.7-4.el8            baseos           87 k
+ python3-libsemanage                   x86_64          2.9-9.el8              baseos          128 k
+ python3-policycoreutils               noarch          2.9-21.1.el8           baseos          2.2 M
+ python3-setools                       x86_64          4.3.0-3.el8            baseos          624 k
+ snap-confine                          x86_64          2.58.3-1.el8           epel            3.5 M
+ snapd-selinux                         noarch          2.58.3-1.el8           epel            553 k
+
+Transaction Summary
+====================================================================================================
+Install  10 Packages
+
+Total size: 25 M
+Total download size: 17 M
+Installed size: 70 M
+Downloading Packages:
+[SKIPPED] bash-completion-2.7-5.el8.noarch.rpm: Already downloaded
+[SKIPPED] checkpolicy-2.9-1.el8.x86_64.rpm: Already downloaded
+[SKIPPED] policycoreutils-python-utils-2.9-21.1.el8.noarch.rpm: Already downloaded
+[SKIPPED] python3-audit-3.0.7-4.el8.x86_64.rpm: Already downloaded
+[SKIPPED] python3-libsemanage-2.9-9.el8.x86_64.rpm: Already downloaded
+[SKIPPED] python3-policycoreutils-2.9-21.1.el8.noarch.rpm: Already downloaded
+[SKIPPED] python3-setools-4.3.0-3.el8.x86_64.rpm: Already downloaded
+[SKIPPED] snap-confine-2.58.3-1.el8.x86_64.rpm: Already downloaded
+[SKIPPED] snapd-selinux-2.58.3-1.el8.noarch.rpm: Already downloaded
+[MIRROR] snapd-2.58.3-1.el8.x86_64.rpm: Interrupted by header callback: Server reports Content-Length: 15181428 but expected size is: 17737332
+(10/10): snapd-2.58.3-1.el8.x86_64.rpm                              8.6 MB/s |  17 MB     00:01
+----------------------------------------------------------------------------------------------------
+Total                                                               4.5 MB/s |  17 MB     00:03
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                            1/1
+  Installing       : snap-confine-2.58.3-1.el8.x86_64                                          1/10
+  Installing       : python3-setools-4.3.0-3.el8.x86_64                                        2/10
+  Installing       : python3-libsemanage-2.9-9.el8.x86_64                                      3/10
+  Installing       : python3-audit-3.0.7-4.el8.x86_64                                          4/10
+  Installing       : checkpolicy-2.9-1.el8.x86_64                                              5/10
+  Installing       : python3-policycoreutils-2.9-21.1.el8.noarch                               6/10
+  Installing       : policycoreutils-python-utils-2.9-21.1.el8.noarch                          7/10
+  Running scriptlet: snapd-selinux-2.58.3-1.el8.noarch                                         8/10
+  Installing       : snapd-selinux-2.58.3-1.el8.noarch                                         8/10
+  Running scriptlet: snapd-selinux-2.58.3-1.el8.noarch                                         8/10
+  Installing       : bash-completion-1:2.7-5.el8.noarch                                        9/10
+  Installing       : snapd-2.58.3-1.el8.x86_64                                                10/10
+  Running scriptlet: snapd-2.58.3-1.el8.x86_64                                                10/10
+  Running scriptlet: snapd-selinux-2.58.3-1.el8.noarch                                        10/10
+  Running scriptlet: snapd-2.58.3-1.el8.x86_64                                                10/10
+  Verifying        : bash-completion-1:2.7-5.el8.noarch                                        1/10
+  Verifying        : checkpolicy-2.9-1.el8.x86_64                                              2/10
+  Verifying        : policycoreutils-python-utils-2.9-21.1.el8.noarch                          3/10
+  Verifying        : python3-audit-3.0.7-4.el8.x86_64                                          4/10
+  Verifying        : python3-libsemanage-2.9-9.el8.x86_64                                      5/10
+  Verifying        : python3-policycoreutils-2.9-21.1.el8.noarch                               6/10
+  Verifying        : python3-setools-4.3.0-3.el8.x86_64                                        7/10
+  Verifying        : snap-confine-2.58.3-1.el8.x86_64                                          8/10
+  Verifying        : snapd-2.58.3-1.el8.x86_64                                                 9/10
+  Verifying        : snapd-selinux-2.58.3-1.el8.noarch                                        10/10
+
+Installed:
+  bash-completion-1:2.7-5.el8.noarch                  checkpolicy-2.9-1.el8.x86_64
+  policycoreutils-python-utils-2.9-21.1.el8.noarch    python3-audit-3.0.7-4.el8.x86_64
+  python3-libsemanage-2.9-9.el8.x86_64                python3-policycoreutils-2.9-21.1.el8.noarch
+  python3-setools-4.3.0-3.el8.x86_64                  snap-confine-2.58.3-1.el8.x86_64
+  snapd-2.58.3-1.el8.x86_64                           snapd-selinux-2.58.3-1.el8.noarch
+
+Complete!
+bash-4.4# systemctl enable --now snapd.socket
+Created symlink /etc/systemd/system/sockets.target.wants/snapd.socket → /usr/lib/systemd/system/snapd.socket.
+bash-4.4# ln -s /var/lib/snapd/snap /snap
+bash-4.4# exec bash
+bash-4.4# sn
+snap             snmpconf         snmpinform       snmptable        snmptrapd
+snapctl          snmpd            snmpnetstat      snmptest         snmpusm
+snice            snmpdelta        snmpping         snmptls          snmpvacm
+snmp-bridge-mib  snmpdf           snmpps           snmptop          snmpwalk
+snmpbulkget      snmpget          snmpset          snmptranslate
+snmpbulkwalk     snmpgetnext      snmpstatus       snmptrap
+bash-4.4# sn
+snap             snmpconf         snmpinform       snmptable        snmptrapd
+snapctl          snmpd            snmpnetstat      snmptest         snmpusm
+snice            snmpdelta        snmpping         snmptls          snmpvacm
+snmp-bridge-mib  snmpdf           snmpps           snmptop          snmpwalk
+snmpbulkget      snmpget          snmpset          snmptranslate
+snmpbulkwalk     snmpgetnext      snmpstatus       snmptrap
+bash-4.4# snap install gh -y
+error: unknown flag `y'
+bash-4.4# snap install gh
+error: too early for operation, device not yet seeded or device model not acknowledged
+bash-4.4# snap install gh
+2023-04-08T04:28:41-04:00 INFO Waiting for automatic snapd restart...
+Warning: /var/lib/snapd/snap/bin was not found in your $PATH. If you've not restarted your session
+         since you installed snapd, try doing that. Please see https://forum.snapcraft.io/t/9469
+         for more details.
+
+gh 2.6.0-15-g1a10fd5a from Casper (casper-dcl) installed
+
+
+
+bash-4.4# gh auth status
+You are not logged into any GitHub hosts. Run gh auth login to authenticate.
+bash-4.4# yum install git -y
+CentOS Stream 8 - AppStream                                         721  B/s | 4.4 kB     00:06
+CentOS Stream 8 - BaseOS                                            4.2 kB/s | 3.9 kB     00:00
+CentOS Stream 8 - Extras                                            5.7 kB/s | 2.9 kB     00:00
+CentOS Stream 8 - Extras common packages                            5.8 kB/s | 3.0 kB     00:00
+Extra Packages for Enterprise Linux 8 - x86_64                      1.4 kB/s | 7.5 kB     00:05
+Extra Packages for Enterprise Linux Modular 8 - x86_64               76 kB/s | 8.3 kB     00:00
+Dependencies resolved.
+====================================================================================================
+ Package                    Architecture     Version                      Repository           Size
+====================================================================================================
+Installing:
+ git                        x86_64           2.39.1-1.el8                 appstream           104 k
+Installing dependencies:
+ git-core                   x86_64           2.39.1-1.el8                 appstream            10 M
+ git-core-doc               noarch           2.39.1-1.el8                 appstream           3.0 M
+ perl-Error                 noarch           1:0.17025-2.el8              appstream            46 k
+ perl-Git                   noarch           2.39.1-1.el8                 appstream            78 k
+ perl-TermReadKey           x86_64           2.37-7.el8                   appstream            40 k
+
+Transaction Summary
+====================================================================================================
+Install  6 Packages
+
+Total download size: 14 M
+Installed size: 44 M
+Downloading Packages:
+(1/6): git-2.39.1-1.el8.x86_64.rpm                                  188 kB/s | 104 kB     00:00
+(2/6): perl-Error-0.17025-2.el8.noarch.rpm                          209 kB/s |  46 kB     00:00
+(3/6): perl-Git-2.39.1-1.el8.noarch.rpm                             395 kB/s |  78 kB     00:00
+(4/6): perl-TermReadKey-2.37-7.el8.x86_64.rpm                       183 kB/s |  40 kB     00:00
+(5/6): git-core-doc-2.39.1-1.el8.noarch.rpm                         2.2 MB/s | 3.0 MB     00:01
+(6/6): git-core-2.39.1-1.el8.x86_64.rpm                             5.1 MB/s |  10 MB     00:02
+----------------------------------------------------------------------------------------------------
+Total                                                               5.5 MB/s |  14 MB     00:02
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                            1/1
+  Installing       : git-core-2.39.1-1.el8.x86_64                                               1/6
+  Installing       : git-core-doc-2.39.1-1.el8.noarch                                           2/6
+  Installing       : perl-TermReadKey-2.37-7.el8.x86_64                                         3/6
+  Installing       : perl-Error-1:0.17025-2.el8.noarch                                          4/6
+  Installing       : perl-Git-2.39.1-1.el8.noarch                                               5/6
+  Installing       : git-2.39.1-1.el8.x86_64                                                    6/6
+  Running scriptlet: git-2.39.1-1.el8.x86_64                                                    6/6
+  Verifying        : git-2.39.1-1.el8.x86_64                                                    1/6
+  Verifying        : git-core-2.39.1-1.el8.x86_64                                               2/6
+  Verifying        : git-core-doc-2.39.1-1.el8.noarch                                           3/6
+  Verifying        : perl-Error-1:0.17025-2.el8.noarch                                          4/6
+  Verifying        : perl-Git-2.39.1-1.el8.noarch                                               5/6
+  Verifying        : perl-TermReadKey-2.37-7.el8.x86_64                                         6/6
+
+Installed:
+  git-2.39.1-1.el8.x86_64           git-core-2.39.1-1.el8.x86_64 git-core-doc-2.39.1-1.el8.noarch
+  perl-Error-1:0.17025-2.el8.noarch perl-Git-2.39.1-1.el8.noarch perl-TermReadKey-2.37-7.el8.x86_64
+
+Complete!
+bash-4.4# git config --list
+bash-4.4# git config user.name "LinuxAdmin0112"
+fatal: not in a git directory
+bash-4.4# git config --global user.name "LinuxAdmin0112"
+bash-4.4# git config --list
+user.name=LinuxAdmin0112
+bash-4.4# git config user.name "LinuxAdmin0112"
+fatal: not in a git directory
+bash-4.4# git config --list
+user.name=LinuxAdmin0112
+bash-4.4# git config user.email "pubgsoldier0110@gmail.com"
+fatal: not in a git directory
+bash-4.4# git config --global user.email "pubgsoldier0110@gmail.com"
+bash-4.4# git config --list
+user.name=LinuxAdmin0112
+user.email=pubgsoldier0110@gmail.com
+bash-4.4# ssh-keygen -t rsa -b 4096 -C "pubgsoldier0110@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:cwPYKAES8xo9UO2MVoLoaUX4wic2G+4jIQiKn607bKI pubgsoldier0110@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|*+=+.            |
+|oB..o. +         |
+|+ B*. o o        |
+|.&o+o.   .       |
+|X.B     S o      |
+|*o       o .     |
+|o+ o             |
+|oo* .            |
+|Eo++             |
++----[SHA256]-----+
+bash-4.4# eval "$(ssh-agent -s)"
+Agent pid 4312
+bash-4.4# exec ssh-agent bash
+bash-4.4# ssh-add ~/.ssh/id_rsa
+Identity added: /root/.ssh/id_rsa (pubgsoldier0110@gmail.com)
+bash-4.4# cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDCP5GvfkhsthMhg6VjSzB891nDvvZXYNFZHcu9frDnurE+uCDJm82Sk/oXu7PpWrRxDz91CU4AOa6BfQSClqirmMfUY7CStt7I1CZ+29GDPbYjXGYcBjrRJCy1roAaix/Rz9aHp2aOO87c8mukUiROI4Kk/rNju5+xllAYKxI9pwQgPuipZlDmOXL7gtLjE5uC21rvvUIV7qJAMRkvpUvErzkY9D73wgGW6grPFSNj67506oitgyfa3w1ASa/kt71wHeoW4WgitLJI7UYJXsFIPV2CtkvPnkT9FaB0cidovQEa+bSHyFYRS1XynSHJ3o9xh8iSXEcQpoOVnxVo/aZHxBfBEj8RgmdwjEGdSs3s+I+TRiH4rZT7+BOXAmn/G7HMgqbIjZzTPHImh5qtHhr8tz1EnZuYxQxuk4vH+FSa9i+mllocARlzzAAc4doPS1Vpcira37HJW4gf7SKEvVzDXFAUI5k0rP+JU+3WKIxXqp7pp0g36DOyYJt513TU+Lg8TdnLvI6ikqG++8TMGQm0qlRS5XvnLuczlSalML3IqmuJmjg8HP59mt5w9nFJA9N3H5oSwf0OyC0sLsUXDyIky/M+VCaP3J0553sap+pCD6i7qrR7b0+qpxUig5jelKVqB27PxRiZ2aBoOZaW+gQafTtfo0TenoczgiV+7bHtxw== pubgsoldier0110@gmail.com
+bash-4.4# gh auth login
+? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations? SSH
+? Generate a new SSH key to add to your GitHub account? No
+? How would you like to authenticate GitHub CLI? Paste an authentication token
+Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
+The minimum required scopes are 'repo', 'read:org'.
+? Paste your authentication token:
+
+bash-4.4# using putty
+bash: using: command not found
+bash-4.4# pwd
+/root
+bash-4.4# ssh-add .ssh/id_rsa.pub
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '.ssh/id_rsa.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+bash-4.4# ll .ssh/id_rsa.pub
+bash: ll: command not found
+bash-4.4# ls -l .ssh/id_rsa.pub
+-rw-r--r--. 1 root root 751 Apr 24 05:47 .ssh/id_rsa.pub
+bash-4.4# chmod 600 .ssh/id_rsa.pub
+bash-4.4# ssh-add .ssh/id_rsa.pub
+Error loading key ".ssh/id_rsa.pub": invalid format
+bash-4.4# chmod 644 .ssh/id_rsa.pub
+bash-4.4# ssh-add .ssh/id_rsa.pub
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '.ssh/id_rsa.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+bash-4.4# eval 'ssh-agent -s'
+SSH_AUTH_SOCK=/tmp/ssh-DVsjExPSXHil/agent.4460; export SSH_AUTH_SOCK;
+SSH_AGENT_PID=4461; export SSH_AGENT_PID;
+echo Agent pid 4461;
+bash-4.4# ssh-add
+Identity added: /root/.ssh/id_rsa (pubgsoldier0110@gmail.com)
+bash-4.4# ssh-add .ssh/id_rsa.pub
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '.ssh/id_rsa.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+bash-4.4# ssh-add .ssh/id_rsa
+Identity added: .ssh/id_rsa (pubgsoldier0110@gmail.com)
+bash-4.4# eval $(ssh-agent)
+Agent pid 4466
+bash-4.4# git config --list
+user.name=LinuxAdmin0112
+user.email=pubgsoldier0110@gmail.com
+bash-4.4# ll
+bash: ll: command not found
+bash-4.4# ls
+file  git  git1  lvm  parted  parteddisk  parted.pdf  snap
+bash-4.4# mkdir linux
+bash-4.4# cd linux/
+bash-4.4# pwd
+/root/linux
+bash-4.4# git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /root/linux/.git/
+bash-4.4# git branch -m linux
+bash-4.4# git branch --list
+bash-4.4# ls -l
+total 0
+bash-4.4# cd
+bash-4.4# pwd
+/root
+bash-4.4# cd linux/.git/
+bash-4.4# cd ..
+bash-4.4# pwd
+/root/linux
+bash-4.4# touch file
+bash-4.4# git add .
+bash-4.4# git status
+On branch linux
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file
+
+bash-4.4# git commit -m "first"
+[linux (root-commit) 82b501b] first
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file
+bash-4.4# git remote add origin git@github.com:LinuxAdmin0112/Files.git
+bash-4.4# git push -u origin linux
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,20.207.73.82' (ECDSA) to the list of known hosts.
+To github.com:LinuxAdmin0112/Files.git
+ ! [rejected]        linux -> linux (fetch first)
+error: failed to push some refs to 'github.com:LinuxAdmin0112/Files.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+bash-4.4# git pull origin linux --rebase
+remote: Enumerating objects: 47, done.
+remote: Counting objects: 100% (47/47), done.
+remote: Compressing objects: 100% (32/32), done.
+remote: Total 47 (delta 9), reused 30 (delta 5), pack-reused 0
+Unpacking objects: 100% (47/47), 95.70 KiB | 141.00 KiB/s, done.
+From github.com:LinuxAdmin0112/Files
+ * branch            linux      -> FETCH_HEAD
+ * [new branch]      linux      -> origin/linux
+dropping 82b501bb21b8d7490f64953cb60b859d0ddddd8f first -- patch contents already upstream
+Successfully rebased and updated refs/heads/linux.
+bash-4.4# git branch --list
+* linux
+bash-4.4# git push -u origin linux
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+bash-4.4# git push -u origin linux
+branch 'linux' set up to track '

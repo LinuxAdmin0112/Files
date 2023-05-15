@@ -1,0 +1,1000 @@
+    5  su Ramesh
+    6  ll
+    7  mail -s "f" Ramesh
+    8  su Ramesh
+    9  mail
+   10  cd /var
+   11  ll
+   12  cd log
+   13  ll
+   14  cat maillog 
+   15  cat maillog | less
+   16  mail -s "f" ramesh
+   17  mail
+   18  su Ramesh
+   19  cd
+   20  yum install ssmtp
+   21  echo "Subject: hi" | sendmail eramesharavind0110@gmail.com
+   22  echo "Subject: hi" | sendmail test@example.com
+   23  yum install *mtp
+   24  yum install smtp
+   25  yum install *smtp
+   26  yum install ssmtp
+   27  ll
+   28  sendmail eramesharavind0110@gmail.com < lt
+   29  man find
+   30  find --help
+   31  touch file1234567
+   32  ls
+   33  find file1234567
+   34  find file1234567 -exec ls -l {} /;
+   35  find file1234567 -exec ls -l {} \;
+   36  find file1234567 | ls -l
+   37  locate file1234567
+   38  updatedb
+   39  locate file1234567
+   40  echo 'hi bye fi' > kite
+   41  cat kite 
+   42  cat kite | find fi
+   43  cat kite | grep fi
+   44  find . -name fil 
+   45  find . -name fil*
+   46  find . -name file
+   47  find . -name file*
+   48  ll
+   49  find . -name file*
+   50  find . -name *le123
+   51  find . -name *il
+   52  find . -name *ile
+   53  find . -name *ile*
+   54  find . fil*
+   55  find . file*
+   56  find . -name "*ile*"
+   57  find . -name "file*"
+   58  find . -name "*ile*"
+   59  find . -name "file1234567" -exec rm -rf {} \; 
+   60  ll
+   61  find . -type d
+   62  ls -larth
+   63  tree hi
+   64  find . -type d -name "ans*" {} \;
+   65  find . -type d -name "*ans*" {} \;
+   66  find . -type d -name "*ans*" {} /;
+   67  find . -type d -name ".ans*" {} /;
+   68  find . -type d -name ".ansible" {} /;
+   69  find . -type d -name "hi" {} /;
+   70  find . -type d -name "hi" {} \;
+   71  find . -type d -name "hi"
+   72  echo  hi bye good > hi/two.txt
+   73  tree hi
+   74  find . -type f -name "*.txt" -exec grep bye {} \;
+   75  echo  hi good > hi/two.txt
+   76  find . -type f -name "*.txt" -exec grep bye {} \;
+   77  echo  hi bye good > hi/two.txt
+   78  echo  hi good >> hi/two.txt
+   79  find . -type f -name "*.txt" -exec grep bye {} \;
+   80  find . -type f -name "*.txt" -exec grep hi {} \;
+   81  ls -l hi/two.txt 
+   82  echo hi > one.txt
+   83  echo hi >> one.txt
+   84  ls -l one.txt 
+   85  chmod 755 one.txt 
+   86  ls -l one.txt 
+   87  find . -type f -perm 644 -name "*.txt" -exec grep hi {} \;
+   88  find . -type f -perm 755 -name "*.txt" -exec grep hi {} \;
+   89  find . -type f -perm 755 -name "*.txt" -exec grep uu {} \;
+   90  find . -type f -perm 755 -name "*.txt" -exec grep uu {} \; -v
+   91  find . -type f -perm 755 -name "*.txt" -exec grep uu -v {} \; 
+   92  find --help
+   93  man find
+   94  man find | grep verbose
+   95  man find | grep last
+   96  man find
+   97  find . file -delete[B
+   98  find . 'file' -delete
+   99  find . 'file'
+  100  ll
+  101  find .file
+  102  ls /
+  103  man find
+  104  find /var/log -type f -size +200m {} \;
+  105  find /var/log -type f -size +200M {} \;
+  106  find /var/log -type f -size +200M -exec ls -l {} \;
+  107  find /var/log -type f -size +20M -exec ls -l {} \;
+  108  find /var/log -type f -size +2K -exec ls -l {} \;
+  109  find /var/log -type f -size +2 -exec ls -l {} \;
+  110  find /var/log -type f -size +2 -exec ls -lh {} \;
+  111  find /var/log -type f -size +2K -exec ls -lh {} \;
+  112  find /var/log -type f -size +2k -exec ls -lh {} \;
+  113  find /var/log -type f -size -2k -exec ls -lh {} \;
+  114  find /var/log -type f -size +1G -exec ls -lh {} \;
+  115  find /var/log -type f -size +1k
+  116  find /var/log -type f -size +1k ls -l
+  117  find /var/log -type f -size +1k | ls -l
+  118  ll
+  119  curl www.google.com
+  120  curl www.google.com > google
+  121  curl www.apple.com > apple
+  122  curl www.yahoo.com > yahoo
+  123  curl www.twitter.com > twitter
+  124  ll
+  125  curl www.twitter.com 
+  126  curl www.twitter.com
+  127  curl www.yahoo.com
+  128  cd
+  129  curl www.twitter.com > twitter > twitter 
+  130  ll
+  131  find . -size -1k -exec rm -rf {} \;
+  132  ll
+  133  cat yahoo 
+  134  mkdir dir[1-9]
+  135  ll
+  136  mkdir dir{1-9}
+  137  ll
+  138  mkdir dir{1 - 9}
+  139  ll
+  140  find . -type d -name "*dir*" -exec ls -l {} \;
+  141  find . -type d -name "*dir*" 
+  142  find . -type d -name "*dir*" -exec ls {} \;
+  143  touch dir\[1-9\]/file
+  144  find . -type d -name "*dir*" -exec ls {} \;
+  145  find . -type d -name "*dir*" -exec ls -l {} \;
+  146  find . -type d -name "*dir*" -exec tree {} \;
+  147  find . -type d -name "*dir*" -exec tree du {} \;
+  148  find . -type d -name "*dir*" -exec du tree {} \;
+  149  find . -type d -name "*dir*" -exec du {} \;
+  150  df -h
+  151  fallocate -s 2G dir\[1-9\]/2gbfile
+  152  fallocate -l 2G dir\[1-9\]/2gbfile
+  153  ll
+  154  tree
+  155  du
+  156  du -h
+  157  find . -type f -size +1G -name "*file" 
+  158  find . -type f -size +1G -name "*fil" 
+  159  find . -type f -size +1G -name "*fil*" 
+  160  find . -type f -size +1G -name "*fil*" -exec getfacl {} \;
+  161  getfacl dir\[1-9\]/2gbfile 
+  162  find . -type f -size +1G -name "*fil*" -exec chmod +x {} \;
+  163  getfacl dir\[1-9\]/2gbfile 
+  164  find . -type f -size +1G -name "*fil*" -exec truncate -s 10m {} \;
+  165  du
+  166  du -h
+  167  history > history
+  168  mv history /
+  169  ls /
+  170  man find | grep xdev
+  171  find / -xdev -size +1G -exec ls -l {} \;
+  172  find / -xdev -size +2M -exec ls -l {} \;
+  173  find / -xdev -size +20M -exec ls -l {} \;
+  174  find / -xdev -size +20M -exec ls -lh {} \;
+  175  find / -xdev -size +20M -exec ls -lh -exec awk '{print $1,$9}' {} \;
+  176  find / -xdev -size +20M -exec ls -lh -exec awk'{print $1,$9}' {} \;
+  177  find / -xdev -size +20M -exec  -exec awk'{print $1,$9}' {} \;
+  178  find / -xdev -size +20M -exec awk'{print $1,$9}' {} \;
+  179  find / -xdev -size +20M -exec awk'{print $1}' {} \;
+  180  find / -xdev -size +20M -exec ls -lh {} \;
+  181  find / -size +20M -exec ls -lh {} \;
+  182  find / -xdev -size +20M -exec ls -lh {} \; > xdev
+  183  find / -size +20M -exec ls -lh {} \; > dev
+  184  find / -size +20M -exec ls -lh {} \; > dev6
+  185  find / -size +20M -exec ls -lh {} \; 
+  186  find / -size +20M -exec ls -lh {} \; >> hb
+  187  find / -size +20M -exec ls -lh {} \; > jn
+  188  ll
+  189  diff hb xdev
+  190  ll
+  191  cat dev
+  192  cat xdev
+  193  cmp dev xdev
+  194  diff dev xdev
+  195  cat -n xdev
+  196  cat -n dev
+  197  vi /history 
+  198  df -h
+  199  fallocate -l 300M mani
+  200  ls -l mani
+  201  ls -lh mani
+  202  bc 
+  203  mv mani /
+  204  find / -type f -size 300M 
+  205  find / -type f -size 300M -exec ls-lh {} \;
+  206  find / -type f -size 300M -exec ls-lh {} \; > manikan
+  207  ll
+  208  cat manikan 
+  209  cd /
+  210  du
+  211  find / -type f -size 300M -exec ls-lh {} \; > manikan
+  212  ll
+  213  find / -xdev -type f -size 300M -exec ls-lh {} \;
+  214  cd ~
+  215  cd root
+  216  cd /
+  217  pwd
+  218  cd proc/
+  219  ll
+  220  cd 
+  221  mv mani ~
+  222  cd /
+  223  mv mani ~
+  224  cd ~
+  225  find / -type f -size 300M -exec ls-lh {} \;
+  226  find / -type f -size +299M -exec ls-lh {} \;
+  227  find . -type f -size +299M -exec ls-lh {} \;
+  228  find . -type f -size +299M -exec ls -lh {} \;
+  229  cp mani /
+  230  find / -type f -size +299M -exec ls -lh {} \;
+  231  cd /proc/7262/task/fd
+  232  cd /proc/7262
+  233  cd /proc/
+  234  ll
+  235  cd /proc/ | less
+  236  cd /proc | less
+  237  ls -l /proc | less
+  238  find / -type f -size +299M -exec ls -lh {} \;
+  239  top ls -l
+  240  head l;s -l
+  241  head ls -l
+  242  ls -l | head
+  243  cd ~
+  244  find / -type f -size 300M
+  245  find / -type f -size 300M -exec truncate -s 10m {} \;
+  246  ls -l
+  247  ls -lhj
+  248  ls -lh
+  249  alias ll=ls -larth 
+  250  alias ll ='ls -larth' 
+  251  alias ll='ls -larth' 
+  252  ll
+  253  ll /mani
+  254  which ll
+  255  fallocate -l +300M Vikash
+  256  ll
+  257  clear
+  258  find . -type f -s 300
+  259  find . -type f -size 300M -exec truncate -s 5M {} \;
+  260  ll
+  261  find . -type f -size 300
+  262  find . -type f -size 5M
+  263  find . -type f -size -5M
+  264  find / -type f -size -5M
+  265  find / -type f -size +299M -exec ls -lh {} \;
+  266  find / -xdev -type f -size +299M -exec ls -lh {} \;
+  267  ls -l /dev/
+  268  find / -type f -size +299M -exec ls -lh {} \;
+  269  find / -xdev -type f -size +299M -exec ls -lh {} \;
+  270  find / -type f -size 128T -exec ls -lh {} \;
+  271  find / -type f -size 128t -exec ls -lh {} \;
+  272  find / -type f -size 128G -exec ls -lh {} \;
+  273  ls -l /proc/kcore 
+  274  ll /proc/kcore 
+  275  cat /proc/kcore  | less
+  276  4
+  277  cat /etc/fstab 
+  278  find / -type f -size 128t -exec ll {} \;
+  279  find . -type f -size 128M -exec ll {} \;
+  280  alias tr='truncate -s 10M '
+  281  fallocate -l 100M big1
+  282  fallocate -l 100M big2
+  283  fallocate -l 100M big3
+  284  fallocate -l 200M big4
+  285  ll
+  286  ll big*
+  287  compgen -u
+  288  compgen -g
+  289  compgen -u
+  290  compgen -g
+  291  chown vikash Vikash 
+  292  ll Vikash 
+  293  find . -user vikash -exec ll {} \;
+  294  find . -user vikash -exec ls -l {} \;
+  295  which ll
+  296  find . -user vikash -exec ll {} \;
+  297  ll
+  298  find / -user vikash -exec ls -l {} \;
+  299  find / -xdev -user vikash -exec ls -l {} \;
+  300  cat /var/spool/mail/vikash 
+  301  ll
+  302  which tr
+  303  tr big1
+  304  ll big1
+  305  find . -xdev -type f -size 100M -exec tr {} \;
+  306  ll big*
+  307  find . -xdev -type f -name 'big2' -exec tr {} \;
+  308  tr --help
+  309  find . -xdev -type f -size 100M -exec tr {} \;
+  310  ll
+  311  find . -xdev -type f -size 100M -exec truncate -s 99M {} \;
+  312  ll bi*
+  313  chmod 755 big*
+  314  ll bi*
+  315  chmod 755 big1 big4
+  316  ll bi*
+  317  chmod 600 big1 big4
+  318  ll bi*
+  319  find . -xdev -type f -size +100M -perm 600 -exec truncate -s 10M {} \;
+  320  ll bi*
+  321  chown vikah big1
+  322  chown vikash big1
+  323  ll bi*
+  324  find . -xdev -user vikash -type f -size +9M -perm 600 -exec truncate -s 6M {} \;
+  325  ll bi*
+  326  chgrp vikash big3
+  327  ll big*
+  328  chown Ramesh big3
+  329  ll big*
+  330  find . -xdev -user Ramesh -group vikash -type f -size +9M -perm 600
+  331  find . -xdev -user Ramesh -group vikash -type f -size +9M -perm 755
+  332  find . -xdev -user Ramesh -group vikash -type f -size +9M -perm 755 -exec ls -l {} \;
+  333  getfacl big1
+  334  getfacl big3
+  335  find . -xdev -user Ramesh -group vikash -type f -size +9M -perm 755 -e
+  336  find . -xdev -user Ramesh -group vikash -type f -size +9M -perm 755 -exec ls -lh {} \;
+  337  find . -xdev -user Ramesh -group vikash -type f -size +9M -perm 755 -exec truncate -s 10M {} \;
+  338  ll bi*
+  339  uname -a
+  340  cat /etc/os-release
+  341  find --help | grep date
+  342  find --help | grep time
+  343  ll
+  344  chmod u+s big1
+  345  chmod g+s big2
+  346  chmod +t big3
+  347  ll bi*
+  348  tree dir\[1-9\]/
+  349  touch the\vikash
+  350  ll
+  351  runlevel
+  352  tree dev6
+  353  df
+  354  df -h'
+  355  df -h
+  356  df -i
+  357  df --help
+  358  df -H
+  359  df -h
+  360  INIT 0
+  361  df -ih
+  362  df -iH
+  363  init 0
+  364  fallocate -l 1G billu
+  365  ll
+  366  ll billu 
+  367  ls -l > doop
+  368  cat doop
+  369  pwd > doop
+  370  cat doop
+  371  ls -l >> doop
+  372  cat doop
+  373  chmod u=vikash
+  374  chmod u=vikash billu
+  375  chown vikash billu
+  376  ll billu 
+  377  falloacte -l 900M meni
+  378  fallocate -l 900M meni
+  379  ll meni 
+  380  chown vikash meni
+  381  find . -user vikash -name bi -type f -size +500M 
+  382  find / -user vikash -name bi -type f -size +500M 
+  383  fallocate -l 600M bi
+  384  find . -user vikash -name bi -type f -size +500M 
+  385  chown vikash bi
+  386  find . -user vikash -name bi -type f -size +500M 
+  387  find . -user vikash -name bi* -type f -size +500M 
+  388  find . -user vikash -name "bi*" -type f -size +500M 
+  389  rm bi
+  390  find . -user vikash -name "bi*" -type f -size +500M -exec truncate -s 200M
+  391  find . -user vikash -name "bi*" -type f -size +500M -exec truncate -s 200M {} \;
+  392  ll billu
+  393  alias human="ls -lh"
+  394  human billu
+  395  mkdir dir
+  396  find . -name dir -type d -exec cd; fallocate -l 10M file {} \;
+  397  find . -name dir -type d -exec fallocate -l 10M file {} \;
+  398  find . -name dir -type d -exec fallocate -l 10M {} \;
+  399  find . -name dir -type d -exec cd {} \;
+  400  find . -name dir -type d -exec cd {} \; > fo
+  401  cat fo
+  402  fallocate prem -size 2G
+  403  fallocate -l 2G prem
+  404  ls -l
+  405  human prem
+  406  chown ramesh prem
+  407  chown prem ramesh
+  408  chown Ramesh prem
+  409  ls -l
+  410  chmod prem 751
+  411  chmod -help
+  412  chmod --help
+  413  chmod -c 751 prem
+  414  getfacl --help
+  415  clear
+  416  ls -lh
+  417  gertfacl prem
+  418  getfacl prem
+  419  find . -user Ramesh -name prem -size +1G -perm 751  
+  420  find . -user Ramesh -name prem -size +1G -perm 751 -exec truncate -s 200M {} \;
+  421  ls -lh
+  422  find . -user Ramesh -name prem -size +100M -perm 751
+  423  history >  history
+  424  cat history 
+  425  find . -user Ramesh -name prem -size +1G -perm 751  
+  426  find . -user Ramesh -name prem -size 200M -perm 751  
+  427  find . -user Ramesh -name prem -size +100M -perm 751 -exec ls -lh {} \;
+  428  truncate -s 10M prem
+  429  ll prem
+  430  alias ll ="ls -lrth"
+  431  alias ll="ls -lrth"
+  432  ll prem
+  433  df --help
+  434  df --help | less
+  435  ll prem
+  436  df prem 
+  437  df -h /
+  438  df
+  439  df -h
+  440  df -H
+  441  df -i
+  442  df -ih
+  443  df -iH
+  444  df -a
+  445  df -B
+  446  df -B prem
+  447  df -BM prem
+  448  ll prem
+  449  df -k prem
+  450  df -g prem
+  451  df -G prem
+  452  df -l prem
+  453  df -l 
+  454  df -h
+  455  df -l
+  456  df -t
+  457  df -t prem
+  458  df -t /
+  459  df --version
+  460  bc
+  461  df -t-total
+  462  df --total
+  463  df -h
+  464  df
+  465  df -h
+  466  df -H
+  467  df -i
+  468  df -ih
+  469  df -iH
+  470  df -h --total
+  471  df -H --total
+  472  df -a
+  473  df -a | sort
+  474  df -a
+  475  df
+  476  df -BM
+  477  df -B
+  478  df -k
+  479  df -l
+  480  df prem
+  481  ls -l /boot/
+  482  df /boot/System.map-4.18.0-448.el8.x86_64 
+  483  df --sync
+  484  df h
+  485  df 
+  486  touch 1.txt 2.txt
+  487  df -T txt
+  488  df -t txt
+  489  df -l txt
+  490  touch text
+  491  df -T text
+  492  df -t text
+  493  df -l text
+  494  df -t xfsdf 
+  495  cat /etc/fstab | grep xfs
+  496  df text
+  497  df -T txt
+  498  df -l txt
+  499  df -t txt
+  500  du --help | less
+  501  du
+  502  du --time=word
+  503  du --time=WORD
+  504  du --help | less
+  505  du -a
+  506  du --help | less
+  507  du -c
+  508  du -s
+  509  du -S
+  510  du -Sh
+  511  du -h
+  512  du -h /
+  513  du -ch / | tail -2 
+  514  du -xdev -ch / | tail -2 
+  515  du -ch / | tail -2 
+  516  du -ch / | grep total 
+  517  echo hi > file
+  518  sed/hi/bye file
+  519  sed --help
+  520  sed --help |less
+  521  sed 's/hi/bye' file 
+  522  cat file
+  523  sed 's/hi/bye/' file 
+  524  echo "hi ye hi bye hi bye " > file
+  525  sed 's/hi/bye/' file 
+  526  cat file
+  527  sed 's/hi/bye/' file 
+  528  sed 's/hi/bye/3' file 
+  529  sed 's/hi/bye/g' file 
+  530  sed 's/hi/bye/2' file 
+  531  cat file
+  532  sed 's/ye/bye/' file > file
+  533  cat file
+  534  echo "hi bye hi bye hi bye " > file
+  535  sed 's/hi/bye/g' file 
+  536  sed 's/hi/bye/g' file >> file
+  537  cat file
+  538  sed 's/hi/bye/g' file > file
+  539  cat file
+  540  echo "hi bye hi bye hi bye " > file
+  541  sed 's/hi/bye/g' file >> file
+  542  cat file
+  543  sed 's/\(\b[A-Z]\)/
+  544  sed 's/\(\b[A-Z]\)/\(\1\)/g' file
+  545  echo "hi bye"| sed 's/\(\b[A-Z]\)/\(\1\)/g' 
+  546  echo "hi bye" | sed 's/\(\b[A-Z]\)/\(\1\)/g' 
+  547  cat file
+  548  sed '2 s/bye/hi/' file
+  549  sed '2 s/bye/hi/g' file
+  550  sed ' s/bye/hi/g' file
+  551  sed ' s/bye/hi/p' file
+  552  sed ' s/bye/hi/p' file >> file
+  553  cat file
+  554  sed ' 1,3 s/bye/hi/g' file
+  555  sed ' 1,3 s/bye/hi/' file
+  556  cat file
+  557  cat -n file
+  558  sed '2,5d' file
+  559  cat file
+  560  du
+  561  find / -xdev -size +20M -exec du {} \;
+  562  find / -xdev -size +20M -exec du -h {} \;
+  563  find / -xdev -size +20M -exec ls -lh {} \;
+  564  find / -xdev -size +20M -exec ll {} \;
+  565  find / -xdev -size +20M 
+  566  find / -xdev -size +20M | wc -l
+  567  find / -xdev -size +20M -exec ll {} \; | wc -l
+  568  find / -xdev -size +20M -exec ls -lh {} \; | wc -l
+  569  find / -xdev -size +20M -exec ls -lh {} \; | wc 
+  570  du
+  571  du -h
+  572  du -H
+  573  du -i
+  574  du -0
+  575  du -a
+  576  du -B
+  577  du -c
+  578  du -s
+  579  du -S
+  580  du -time
+  581  du --time
+  582  history 
+  583  du -H
+  584  du -h
+  585  du -0
+  586  du
+  587  du -0h
+  588  du -time
+  589  du --time
+  590  date
+  591  chmod +x dir
+  592  du --time
+  593  ll
+  594  chmod +x /dir
+  595  chmod +x ./dir
+  596  du --time
+  597  ll
+  598  touch dir/file
+  599  du --time
+  600  touch dir/ert
+  601  date
+  602  touch dir\{1-9\}/ert
+  603  du --time
+  604  du -s
+  605  du -sh
+  606  ll
+  607  du
+  608  du -h
+  609  du -ch
+  610  du -h --total
+  611  top
+  612  du -d 1 .
+  613  du -d 2 .
+  614  mkdir -p dir1/die2/dir3
+  615  du -d 2 .
+  616  du -d 3 .
+  617  du -d 3 . | awk '{print$2}'
+  618  du -d 3 . | awk '{print$2}' | sort
+  619  du -d 3 . | awk '{print$2}' | sort -r
+  620  du -d 3 . | awk '{print$2}' | sort -n
+  621  du -d 3 . | awk '{print$2}' | sort -n | cut
+  622  du -d 3 . | cut $1 | sort -n | cut
+  623  du -d 3 . | cut $1 | sort 
+  624  du -d 3 . | cut 1 | sort 
+  625  vi spt
+  626  cat spt 
+  627  sort -n spt 
+  628  vi spt
+  629  sort -n spt 
+  630  sort spt 
+  631  sort -n spt 
+  632  sort -nr spt 
+  633  echo 33 >> spt
+  634  cat spt 
+  635  sort -n spt 
+  636  sort -u spt 
+  637  init 0
+  638  touch --help
+  639  whatis touch
+  640  file cake
+  641  file cake.jpg
+  642  touch cake
+  643  file cake.jpg
+  644  file cake
+  645  whereis cake
+  646  whois cake
+  647  touch -t 20221201 cake 
+  648  touch -t 2022120100000 cake 
+  649  touch -t 200505050000 cake 
+  650  ll cake
+  651  touch -t 20:0505050000 cake 
+  652  touch -t 200505050000 cake 
+  653  ll
+  654  ll cake
+  655  touch -t 200505057777 cake 
+  656  touch -t 200505050000 cake 
+  657  man touch
+  658  qqq
+  659  touch -t 200505051256 cake 
+  660  ll cake 
+  661  touch -t 000005051256 cake 
+  662  ll cake 
+  663  touch -t 200505051256 cake 
+  664  ll cake 
+  665  man touch
+  666  ll
+  667  touch -m 16:00 yahoo
+  668  ll yahoo
+  669  date
+  670  man touch
+  671  ll yahoo 
+  672  touch --date="Sun, 30 Mar 2012 04:05:09 "
+  673  touch --date="Sun, 30 Mar 2012 04:05:09"
+  674  touch --date="Sun, 30 Mar 2012 04:05:09 -0800"
+  675  touch --help
+  676  touch -c -t 12011500 yahoo 
+  677  ll yahoo 
+  678  ll big*
+  679  touch -m big*
+  680  ll big*
+  681  touch -c new
+  682  ll new
+  683  touch -c big2
+  684  man touch | grep '-c'
+  685  man touch | grep -c
+  686  man touch | grep ""
+  687  man touch 
+  688  ll yahoo 
+  689  ll bi*
+  690  touch -r yahoo bi*
+  691  ll bi*
+  692  cat /usr/bin/touch 
+  693  decrypt /usr/bin/touch 
+  694  yum install decrypt
+  695  yum install decode
+  696  touch -t 201312011600 ftyu
+  697  ll ftyu 
+  698  stat ftyu 
+  699  touch -t 201312011600 lake
+  700  date
+  701  stat lake 
+  702  find . -type f -size 0
+  703  ls -l manikan
+  704  find . -type f -size 0 {}\;
+  705  find . -type f -size 0 ls -l
+  706  find . -xdev -type f -size 0 
+  707  find . -type f -size 0 -exec ls -l
+  708  find . -type f -size 0 -exec ls -l {}\;
+  709  find . -type f -size 0 -exec() ls -l {}\;
+  710  find . -type f -size 0 -exec ls -l {} \;
+  711  find . -type f -size 0 -exec rm {} \;
+  712  find . -type f -size 0 -exec ls -l {} \;
+  713  find . -type f -size +0 -exec ls -l {} \;
+  714  find . -type f -size +0 -exec ls -l {} \; | awk '{print$2,$9}'
+  715  find . -type f -size +0 -exec ls -lh {} \; | awk '{print$5,$9}'
+  716  find . -type f -size +0 -exec ls -lh {} \; | awk '{printNF,$5,$9}'
+  717  find . -type f -size +0 -exec ls -lh {} \; | awk '{print NF,$5,$9}'
+  718  find . -type f,d -size +0 -exec ls -lh {} \; | awk '{print$5,$9}'
+  719  find . -type f d -size +0 -exec ls -lh {} \; | awk '{print$5,$9}'
+  720  find . -type f,d -size +0 -exec ls -lh {} \; | awk '{print$5,$9}'
+  721  df -h
+  722  fdisk -l
+  723  fdisk /dev/sdb
+  724  vi /etc/fstab
+  725  mkdir sdb
+  726  mkfs.ext3 /dev/sdb1
+  727  mount /dev/sdb1 sdb
+  728  df -h
+  729  df -ih /dev/sdb1
+  730  parted /dev/sdb
+  731  df -h
+  732  df -ih /dev/sdb1
+  733  bc
+  734  mkfs.ext3 -i 10000 /dev/sdb1
+  735  umount /dev/sdb1
+  736  mkfs.ext3 -i 10000 /dev/sdb1
+  737  mount /dev/sdb1 sdb
+  738  df -ih
+  739  umount /dev/sdb1
+  740  mkfs.ext3 -i 1G /dev/sdb1
+  741  mkfs.ext3 -i 67108864 /dev/sdb1
+  742  mount /dev/sdb1 sdb
+  743  df -ih /dev/sdb1
+  744  touch file{1..120}
+  745  ll
+  746  rm -rf fil*
+  747  cd sdb
+  748  ll
+  749  touch vik{1..190}
+  750  ll
+  751  ll | less
+  752  df -ih sdb
+  753  df -ih /root/sdb
+  754  touch vik{200..255}
+  755  touch vik{200..252}
+  756  ll
+  757  df -ih /root/sdb
+  758  touch prem
+  759  df -h
+  760  umount /root/sdb
+  761  cd
+  762  umount /root/sdb
+  763  bc
+  764  mkfs.ext3 -i 1048576 /dev/sdb1
+  765  mount sdb
+  766  df -ih /dev/sdb1
+  767  umount /root/sdb
+  768  mkfs.xfs /dev/sdb1
+  769  mkfs.xfs -f /dev/sdb1
+  770  vi /etc/fstab
+  771  mount sdb
+  772  umount sdb
+  773  mount sdb
+  774  df -ih /root/sdb
+  775  xfs_growfs -m 50% /dev/sdb1
+  776  df -ih /dev/sdb1
+  777  xfs_growfs -m 2% /dev/sdb1
+  778  df -ih /dev/sdb1
+  779  xfs_growfs -m 2% /dev/sdb1
+  780  df -ih /dev/sdb1
+  781  xfs_growfs -m 0.02% /dev/sdb1
+  782  df -ih /dev/sdb1
+  783  fsck /dev/sdb1
+  784  xfs_repair /dev/sdb1
+  785  umount
+  786  umount /dev/sdb1
+  787  xfs_repair /dev/sdb1
+  788  parted /dev/sdb1
+  789  df -h
+  790  cd /dev/mapper/cs-root 
+  791  fdisk /dev/mapper/cs-root 
+  792  parted /dev/sdb1
+  793  fdisk -l | grep /dev
+  794  mkdir /ramesh
+  795  mkdir /ramesh1
+  796  mount /dev/sdb1 /ramesh
+  797  mkfs.ext3 -f /dev/sdb1
+  798  mkfs.ext3 /dev/sdb1
+  799  mount /dev/sdb1 /ramesh
+  800  df -h /ramesh
+  801  cd /ramesh
+  802  fallocate -l 100m humb
+  803  fallocate -l 100M humb
+  804  fallocate -l 10 humb
+  805  ll
+  806  fallocate -l 10 humbk
+  807  ll
+  808  rm hum* 
+  809  ll
+  810  cd lost+found; ls -l
+  811  cd lost+found; 
+  812  ls -l
+  813  cd
+  814  ls -l /ramesh
+  815  ls -l /
+  816  ls -lh
+  817  cd /
+  818  ls -lh
+  819  df -l | grep sdb1
+  820  df -h | grep sdb1
+  821  cd /ramesh1
+  822  ll
+  823  cd..
+  824  cd ..
+  825  df -h | grep sdb1
+  826  ifconfig 
+  827  yum install putty*
+  828  systemctl status putty*
+  829  systemctl status putty
+  830  systemctl status ssh
+  831  putty
+  832  ifconfig
+  833  init 0
+  834  top
+  835  ll
+  836  rm *
+  837  rm -rf *
+  838  ll
+  839  systemctl status httpd
+  840  systemctl start httpd
+  841  systemctl status httpd
+  842  systemctl stop httpd
+  843  systemctl restart httpd
+  844  systemctl status httpd
+  845  fdisk --help
+  846  fdisk -l
+  847  fdisk -l | grep dev
+  848  df -h | grep sdb
+  849  df -h | grep sda
+  850  fdisk /dev/sdb
+  851  script disk
+  852  vi disk
+  853  cat disk
+  854  ll disk 
+  855  scp disk 192.168.56.1:C:/disk/disk
+  856  ifconfig
+  857  ll disk
+  858  pwd
+  859  ll disk
+  860  chmod 777 disk
+  861  mv disk /home/disk
+  862  ll /home/
+  863  pwd /home
+  864  cd /home
+  865  pwd
+  866  chown Ramesh disk
+  867  chgrp Ramesh disk
+  868  ll 
+  869  passwd Ramesh
+  870  mv disk disk.txt
+  871  yum install libreoffice
+  872  soffice --convert-to pdf /home/disk.txt 
+  873  cat disk.pdf 
+  874  ll
+  875  echo "hi i am ramesh" >> ram.txt
+  876  soffice --convert-to pdf /home/ram.txt 
+  877  echo vikash > vik
+  878  cat vik
+  879  pwd
+  880  soffice --convert-to pdf vik 
+  881  ll
+  882  ifconfig
+  883  scp -r LAPTOP-L620ADBU@192.168.56.1:C:\Users\Vikash\Desktop\vikash /home
+  884  ll
+  885  date
+  886  tree vikash/
+  887  cd
+  888  cd /home/
+  889  ll
+  890  date
+  891  rm -rf *
+  892  ll
+  893  cd /
+  894  ll
+  895  cat /etc/passwd | grep Ramesh
+  896  cd ramesh
+  897  ll
+  898  cd 
+  899  cd /home
+  900  ll
+  901  ifconfig | grep inet
+  902  su Ramesh
+  903  cd
+  904  clear
+  905  cat di
+  906  df -h | grep sdb
+  907  umount sdb1
+  908  umount /sdb1
+  909  df -h | grep sdb
+  910  fdisk -l | grep sd
+  911  fdisk /dev/sdb
+  912  fdisk -l | grep sdb
+  913  fdisk -l | grep sdb1
+  914  pvcreate /dev/sdb1
+  915  vgcreate /dev/sdb1
+  916  vgcreate /dev/sdb1 vg1
+  917  vgcreate /vg1 /dev/sdb1
+  918  vgcreate -n vg1 /dev/sdb1
+  919  vgcreate --help
+  920  vgcreate -s 50m -l vg1 /dev/sdb1
+  921  vgcreate -s 50m -s vg1 /dev/sdb1
+  922  vgcreate -s 50m vg1 /dev/sdb1
+  923  vgs
+  924  pvs
+  925  lvcreate -L 45m vg1 lvm1
+  926  lvcreate -L 45m /dev/sdb1/vg1 lvm1
+  927  lvcreate /dev/sdb1/vg1 lvm1
+  928  lvcreate --help
+  929  lvcreate -L 9m dev/sdb1/vg1 -name lvm1
+  930  lvcreate -L 9m /dev/sdb1/vg1 -name lvm1
+  931  lvcreate -L 9m /dev/vg1/lvm1
+  932  lvcreate -L 9M /dev/vg1/lvm1
+  933  lvcreate -s 9M /dev/vg1/lvm1
+  934  lvcreate 9M /dev/vg1/lvm1
+  935  lvcreate -L 9M vg1
+  936  lvs
+  937  lvremove -L 9M vg1
+  938  lvremove vg1
+  939  lvcreate -L 9M vg1 -name lvm1
+  940  lvcreate -L 9M -name /vg1/lvm1
+  941  lvcreate -L 9M -name dev/vg1/lvm1
+  942  lvcreate -L 9M -name /dev/vg1/lvm1
+  943  lvcreate -L 9M -name /dev/sdb1/vg1/lvm1
+  944  lvcreate -L 9M -name /vg1/lvm1
+  945  lvcreate -L 9M -name vg1
+  946  lvs
+  947  df -h
+  948  mount /dev/vg1/ame
+  949  cd /etc/fstab
+  950  vi /etc/fstab
+  951  mkdir lvm1
+  952  cat /etc/fstab | grep lvm1
+  953  mount lvm1
+  954  cat /etc/fstab 
+  955  mkfs.xfs /dev/vg1/ame
+  956  vi /etc/fstab
+  957  mount lvm1
+  958  df -h | grep lvm
+  959  fdisk -h
+  960  fdisk -l
+  961  fdisk /dev/sdb
+  962  fdisk
+  963  fdisk -l
+  964  clear
+  965  fdisk -l
+  966  clear
+  967  fdisk /dev/sdb
+  968  mkdir viks
+  969  mount viks /dev/sdb
+  970  mount viks /dev/sdb2
+  971  fdisk -l
+  972  mkfs ext3 /dev/sdb2
+  973  mkfs.ext3 /dev/sdb2
+  974  vi /etc/fstab
+  975  mount viks /dev/sdb2
+  976  mount /dev/sdb2 viks
+  977  fdisk -l
+  978  df -h
+  979  umount /dev/sdb2 viks
+  980  umount viks
+  981  umount /root/viks 
+  982  df -h | grep vik
+  983  cd /
+  984  mkdir viks
+  985  mount viks
+  986  df -h | grep vik
+  987  umount /dev/sdb2 /root/lvm1
+  988  df -h
+  989  mount /viks
+  990  mount /root/lvm1
+  991  mount lvm1
+  992  mount ~lvm1
+  993  df -h
+  994  cat /etc/fstab
+  995  ll lvm1
+  996  ll | grep lvm1
+  997  mkdir lvm1
+  998  mount lvm1
+  999  df -h lvm1
+ 1000  cd 
+ 1001  ls
+ 1002  pwd
+ 1003  df -h 
+ 1004  history > history

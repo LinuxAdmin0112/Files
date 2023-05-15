@@ -1,0 +1,155 @@
+  998  git checkout linuxc
+  999  git checkout linux
+ 1000  git checkout master
+ 1001  git merge linux
+ 1002  git pull linux
+ 1005  cd .git/
+ 1006  git pull linux
+ 1008  git fetch LinuxAdmin0112
+ 1009  git fetch linux
+ 1010  git fetch --all
+ 1011  git pull linux
+ 1013  git pull linux
+ 1014  git checkout master
+ 1015  git checkout linux
+ 1016  git pull
+ 1017  git branch --set-upstream-to=origin linux
+ 1018  git config advice.setUpstreamFailure false
+ 1019  git fetch
+ 1020  git pull linux
+ 1021  git push --set-upstream origin linux
+ 1022  git add README.md 
+ 1023  git commit
+ 1024  git push
+ 1025  git push -u linux
+ 1026  git push -u origin
+ 1028  git help config
+ 1029  git clear
+ 1030  git clean
+ 1031  git -f clean
+ 1032  git clean -f
+ 1034  git add README.md 
+ 1035  git commit 
+ 1036  git pull
+ 1037  git pull origin
+ 1038  git pull origin linux
+ 1039* git pull  linuxgit config
+ 1040  git pull origin linux
+ 1041  git config
+ 1042  git config --list
+ 1043  git fetch
+ 1044  git merge
+ 1046  git reset -merge
+ 1047  git reset --merge
+ 1048  git pull origin linux
+ 1049   git config pull.rebase false
+ 1050  git config pull.rebase true   
+ 1051   git config pull.ff only 
+ 1052  git pull origin linux
+ 1053  git pull origin linux --rebase
+ 1054  git pull origin linux
+ 1056  git status
+ 1057  git push -u origin linux
+ 1062  git status
+ 1063  git fetch --all
+ 1064  git stash
+ 1065  git checkout branch1
+ 1069  git status
+ 1070  git add .
+ 1071  git commit -m "Chenges in Branch1 demo"
+ 1072  git push -u origin branch1
+ 1073  git checkout linux
+ 1074  git unstash
+ 1075  git stash list
+ 1076  git stash drop
+ 1077  git status
+ 1079  git stash 
+ 1081  git stash 
+ 1082  git status
+ 1083  git stash
+ 1084  git stash --all
+ 1085  git stash list
+ 1086  git stash pop
+ 1087  git status
+ 1088  git add file2 
+ 1089  git commit 
+ 1091  git commit -a 
+ 1092  git commit -m "hi"
+ 1093  git push -u origin linux
+ 1099  git status
+ 1100  git checkout linux
+ 1101  git add redirection 
+ 1102  git commit -m "redirection output"
+ 1103  git push -u origin linux
+ 1104  git branch --list
+ 1105  git origin --list
+ 1106  git branch branch2
+ 1107  git branch --list
+ 1108  git checkout branch2
+ 1110  git status
+ 1111  git add demo
+ 1112  git status
+ 1113  git reset
+ 1114  git status
+ 1115  git stash
+ 1116  git stash --all
+ 1117  git checkout branch1
+ 1118  git stash list
+ 1119  git stash pop
+ 1120  git status
+ 1121  git add demo
+ 1122  git commit -m
+ 1123  git commit -m "branch2 to branch1"
+ 1124  git push -u origin branch1
+ 1125  git checkout branch2 
+ 1127  git status
+ 1128  git add pixel 
+ 1129  git commit -m "branch2"
+ 1130  git push -u origin branch2
+ 1131  git log
+ 1136  git branch --delete branch2
+ 1137  git branch --list
+ 1138  git branch --delete branch1
+ 1139  git checkout linux
+ 1140  git branch --delete branch2
+ 1141  git status
+ 1142  git pull origin linux
+ 1143  git add .
+ 1144  git commit -m "chnage"
+ 1145  git push -u origin linux
+ 1146  git push --delete branch*
+ 1147  git push --delete branch1
+ 1148  git push --delete origin branch1
+ 1149  git push --delete origin branch2
+ 1151  history 150 > git_history
+ 1152  git branch --list
+ 1153  git status
+ 1154  git add .
+ 1155  git status
+ 1156  git commit -m "history"
+ 1157  git push -u origin linux
+ 1158  git clone git@github.com:LinuxAdmin0112/Files.git
+ 1161  git status
+ 1162  git add .
+ 1163  git status
+ 1164  git push -u origin linux
+ 1166  git push --delete file2
+ 1167  git push --delete origin linux file2
+ 1168  git push --delete origin file2
+ 1169  git rm file2
+ 1170  git clone git@github.com:LinuxAdmin0112/Files.git
+ 1173  git clone git@github.com:LinuxAdmin0112/Files.git
+ 1175  git clone git@github.com:LinuxAdmin0112/Files.git
+ 1177  git clone git@github.com:LinuxAdmin0112/Files.git
+ 1182  git rm file2
+ 1183  git status
+ 1185  git restore --staged file2
+ 1187  git status
+ 1188  git restore file2
+ 1190  git rm file2 
+ 1191  git rm pixel newfile 
+ 1192  git status
+ 1193  git commit -m "delete"
+ 1194  git push -u origin linux
+ 1196  history 200 | grep git
+ 1197  history 200 | grep git > git_history 
