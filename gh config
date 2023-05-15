@@ -1,0 +1,13 @@
+###Step 1 :: Download the RPM Package
+wget https://github.com/cli/cli/releases/download/v2.15.0/gh_2.15.0_linux_amd64.rpm
+
+###Step 2 :: Install the package
+sudo rpm -i gh_2.15.0_linux_amd64.rpm
+
+###Step 3 :: Now check the github cli version
+gh --version
+
+Note :: First find out if you are using a 32 bit OS or a 64 but OS. For 32 bit OS use below commands...
+
+wget https://github.com/cli/cli/releases/download/v2.15.0/gh_2.15.0_linux_386.rpm
+sudo rpm -i gh_2.15.0_linux_386.rpm
