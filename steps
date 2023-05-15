@@ -1,0 +1,11 @@
+  175  touch file
+  176  git add .
+  177  git status
+  178  git commit -m "new"
+  179  git remote add git@github.com:LinuxAdmin0112/Files.git
+  180  git remote add origin  git@github.com:LinuxAdmin0112/Files.git
+  181  ll
+  182  git push -u origin 
+  183  git branch --list
+  184  git push -u origin master
+  186  history 15
