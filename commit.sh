@@ -13,7 +13,7 @@ reset=$(tput sgr0)
 echo "${magenta} Git status${reset}"
 git status 
 echo "--------------------------"
-cd ~/linux
+cd ~/git
 echo "${cyan} Git add all${reset}"
 git add . -v
 echo "--------------------------"
@@ -24,6 +24,6 @@ echo "${yellow} Git status${reset}"
 git status 
 echo "--------------------------"
 echo "${blue} Git push started${reset}"
-git push -u origin linux
+git push -u origin master
 echo "--------------------------"
 echo "${magenta}Successfully updated${reset}"
