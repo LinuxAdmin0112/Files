@@ -6,7 +6,7 @@ set passphrase "Linux@0112"
 
 spawn "./commit.sh"
 
-expect "Enter passphrase for /root/.ssh/id_ed25519:"
+expect "*passphrase*:"
 
 send "$passphrase\r";
 
