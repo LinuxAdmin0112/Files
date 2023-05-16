@@ -1,0 +1,9 @@
+#! /bin/bash
+
+echo "what is ur name?"
+
+read $name
+
+echo "what is ur age?"
+
+read $age

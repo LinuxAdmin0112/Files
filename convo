@@ -1,0 +1,9 @@
+#! /bin/bash
+
+what is ur name?
+
+read $name
+
+what is ur age?
+
+read $age

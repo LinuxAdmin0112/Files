@@ -1,0 +1,15 @@
+#! /usr/bin/expect -f
+
+set timeout 1
+
+spawn ./convo
+
+expect "what is ur name?\r"
+
+send "Ramesh\r"
+
+expect "what is ur age?\r"
+
+send "23\r"
+
+interact
