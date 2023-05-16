@@ -10,6 +10,9 @@ cyan=$(tput setaf 6)
 white=$(tput setaf 7)
 reset=$(tput sgr0)
 
+
+echo "${red} ssh_add${reset}"
+ssh-add -D; ssh-add
 echo "${magenta} Git status${reset}"
 git status 
 echo "--------------------------"
