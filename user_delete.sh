@@ -14,7 +14,7 @@ if [[ $? -eq 0 ]]; then
       echo "**********************************************"
 
 else
-      echo "2. SUSERI not found"
+      echo "2. $USERI not found"
       echo "**********************************************"
 
 fi
